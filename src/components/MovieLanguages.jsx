@@ -9,7 +9,7 @@ const MovieLanguages = () =>{
 
 	return(
 		<section>
-			<h2>Filmer fördelade på språk</h2>
+			<h2>Number of movies distributed by language</h2>
 			<Pie data={languagePieConfig}></Pie>
 		</section>
 	)

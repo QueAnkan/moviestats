@@ -36,7 +36,6 @@ const colors = [
 	"#FFD700", // Gold
 	"#FFA500", // Orange
 	"#FF8C00"  // Dark Orange
-
   ];
 
 
@@ -74,4 +73,57 @@ export function getMovieLanguage() {
 		}]
 	}
 
+}
+
+
+
+
+function calculatePremiereData(data) {
+	const dates = data.map(object => object.Premiere)
+	const months = dates.map(month => month.split(' ')[0])
+	
+	const monthCount = {}
+	
+	months.forEach((month) => {
+		if(monthCount[month]){
+			monthCount[month]+=1
+		} else {
+			monthCount[month]=1
+		}
+	})
+
+	const monthNames = Object.keys(monthCount)
+	const premiereNumbers = Object.values(monthCount)
+
+	return {
+		names: monthNames,
+		numbers: premiereNumbers
+	}
+}
+
+
+export function getpremiereMonth() {
+
+const docStats = calculatePremiereData(docData)
+const featureStats = calculatePremiereData(featureData)
+const specialsStats = calculatePremiereData(specialsData)
+
+
+	return{
+		labels: docStats.names,
+		datasets: [{
+			label: 'Documentaries',
+			data:docStats.numbers,
+			backgroundColor: "#FFC300",
+		},
+		{	label:'Feature Films',
+			data:featureStats.numbers,
+			backgroundColor:"#FF1493",
+		},
+		{	label:'Specials',
+			data:specialsStats.numbers,
+			backgroundColor:"#008080",
+		}
+	]
+	}
 }
