@@ -8,16 +8,23 @@ const genreBarConfig = getMovieGenre()
 
 const options = {
 	indexAxis: 'y' ,
-elements: {
-bar: {
-  borderWidth: 2,
-},
-}}
+	elements: {
+		bar: {
+		borderWidth: 2,
+		},
+	},
+	plugins:{
+		Legend:{
+			position: 'rigth',
+		}
+	}
+}
 
 const MovieGenre = () => {
 
 	return(
-		<section>
+		<section className="chart-container">
+			<h1>Number of movies in different genres</h1>
 			<Bar data={genreBarConfig} options={options}></Bar>
 		</section>
 	)

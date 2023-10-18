@@ -32,7 +32,7 @@ const genreStats =  genres.map(genre => genre[1])
 	return{
 		labels:genreNames,
 		datasets: [{
-			label:'',
+			label:'Genres',
 			data:genreStats,
 			backgroundColor:colors,
 		}]
