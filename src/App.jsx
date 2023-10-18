@@ -3,6 +3,7 @@ import './App.css'
 import MovieLanguages from './components/MovieLanguages'
 import PremiereMonths from './components/PremiereMonths'
 import MovieLength from './components/MovieLength'
+import MovieGenre from './components/MovieGenre'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             <MovieLanguages/>
             <PremiereMonths/>
             <MovieLength/>
+            <MovieGenre/>
         </main>
     )
 }

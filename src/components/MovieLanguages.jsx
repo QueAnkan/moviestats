@@ -1,7 +1,7 @@
 import { Pie } from "react-chartjs-2"
 import { Chart as ChartJS, ArcElement, Tooltip, Legend} from 'chart.js'
 ChartJS.register(ArcElement, Tooltip, Legend)
-import { getMovieLanguage } from "../data/getMovie"
+import { getMovieLanguage } from "../data/getMovieLanguages"
 
 const languagePieConfig = getMovieLanguage()
 

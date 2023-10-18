@@ -3,9 +3,9 @@ import { Chart as ChartJS, Tooltip, Legend,  BarElement, LinearScale, CategorySc
 ChartJS.register(Tooltip, Legend, LinearScale,
 	BarElement, CategoryScale);
 
-	import { getpremiereMonth } from "../data/getMovie";
+	import { getPremiereMonth } from "../data/getPremiereMonth";
 
-	const monthBarConfig = getpremiereMonth()
+	const monthBarConfig = getPremiereMonth()
 
 const PremiereMonths = () =>{
 
