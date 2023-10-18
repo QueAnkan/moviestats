@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Exo', sans-serif;
+}
+
+.root-container{
+display: flex;
+flex-direction: column;
+position: relative;
+height: 100vh;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  background-image: url("./assets/images/movie-background-collage_23-2149876008.jpg")
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  padding-top: 8em;
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: white;
+}
