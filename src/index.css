@@ -8,16 +8,16 @@ html{
   scroll-behavior: smooth;
 }
 
-main{
+/* main{
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
 }
-
+ */
 .chart-container{
-  max-width: 100%;
+  max-width: 50%;
   margin-bottom: 4em;
 }
 

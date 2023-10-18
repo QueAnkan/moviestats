@@ -27,4 +27,30 @@ function calculatePremiereData(data) {
 	}
 }
 
-export default calculatePremiereData
+
+// använd split för att ta ut siffrorna, omvandla till nummmer med Numbers() skriv en if-sats om strängen är lång ska index 0 multipliceras med 60 och sedan adderas med index 2 . Skapa en ny array med alla värden sorterade.
+
+function calculateMovieLength(data) {
+
+	const runtime = data.map(object => {
+		const timing = object.Runtime.split(' ')
+			if(timing.length === 4){
+				const hours = Number(timing[0])
+				const minutes = Number(timing[2])
+				return hours * 60 + minutes
+			}else if(timing.length === 2 && timing[1]==='h'){
+				const hours = Number(timing[0])
+				return hours * 60
+			}else{
+				return Number(timing[0])
+			}
+	})
+	
+	const sortedRuntimes = ( runtime.sort((a, b) => a - b))
+	return{
+		sortedRuntimes
+		
+	}
+}
+
+export {calculateMovieLength, calculatePremiereData}

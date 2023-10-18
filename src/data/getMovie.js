@@ -1,7 +1,7 @@
 import docData from './documentaries.json'
 import featureData from './feature-films.json'
 import specialsData from './specials.json'
-import calculatePremiereData from '../assets/calculatefunctions'
+import {calculatePremiereData, calculateMovieLength} from '../assets/calculatefunctions'
 import colors from './colorschemes'
 
 
@@ -69,51 +69,46 @@ const specialsStats = calculatePremiereData(specialsData)
 	}
 }
 
-// använd split för att ta ut siffrorna, omvandla till nummmer med Numbers() skriv en if-sats om strängen är lång ska index 0 multipliceras med 60 och sedan adderas med index 2 . Skapa en ny array med alla värden sorterade.
 
-function calculateMovieLength(data) {
-
-	const runtime = data.map(object => {
-		const timing = object.Runtime.split(' ')
-			if(timing.length === 4){
-				const hours = Number(timing[0])
-				const minutes = Number(timing[2])
-				return hours * 60 + minutes
-			}else if(timing.length === 2 && timing[1]==='h'){
-				const hours = Number(timing[0])
-				return hours * 60
-			}
-			
-			else{
-				return Number(timing[0])
-			}
-	
-	})
-	
-	const sortedRuntimes = ( runtime.sort((a, b) => a - b))
-	return{
-		sortedRuntimes
-		
-	}
-}
-
-
-const testData = calculateMovieLength(allData)
-	
-console.log('TESTDATA resultat: ', testData);
 
 export function getMovieLength() {
 
 	const allRuntimes = calculateMovieLength(allData)
+	
+	const docStats = calculateMovieLength(docData)
+const featureStats = calculateMovieLength(featureData)
+const specialsStats = calculateMovieLength(specialsData)
 	const labels = allRuntimes.sortedRuntimes.map((_, index) => ` ${index + 1}`)
 
 	return{
 		labels: labels,
 		datasets: [{
-			label: 'Runtimes',
-			data:allRuntimes.sortedRuntimes,
-			borderColor:colors,
-			pointBorderColor: colors
-		}]
+			label: 'Documentaries',
+			data:docStats.sortedRuntimes,
+			backgroundColor:colors[1],
+			borderColor:'#000000',
+			pointBorderColor: colors[1],
+			borderWidth:1,
+			pointRadius: 2,
+		},
+		{
+			label: 'Feature Films',
+			data:featureStats.sortedRuntimes,
+			backgroundColor:colors[15],
+			borderColor:'#000000',
+			pointBorderColor: colors[15],
+			borderWidth:1,
+			pointRadius: 2,
+		},
+		{
+			label: 'Specials',
+			data:specialsStats.sortedRuntimes,
+			backgroundColor:colors[28],
+			borderColor:'#000000',
+			pointBorderColor: colors[28],
+			borderWidth:1,
+			pointRadius: 2,
+		}
+	]
 	}
 }

@@ -12,6 +12,10 @@ import {
 		y: {
 			min: 1,
 			max: 200
+		},
+		x: {
+			min: 0,
+			max: 200
 		}
 	}
   }
@@ -20,9 +24,9 @@ import {
 const MovieLength = () => {
 
 	return(
-		<section >
+		<section className="chart-container">
 			<h1></h1>
-			<Line options={options} data={runtimeLineConfig} ></Line>
+			<Line options={options} data={runtimeLineConfig}  ></Line>
 		</section>
 	)
 }
