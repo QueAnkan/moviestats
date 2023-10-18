@@ -8,7 +8,7 @@ const languagePieConfig = getMovieLanguage()
 const MovieLanguages = () =>{
 
 	return(
-		<section>
+		<section className="chart-container">
 			<h2>Number of movies distributed by language</h2>
 			<Pie data={languagePieConfig}></Pie>
 		</section>

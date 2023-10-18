@@ -1,44 +1,11 @@
 import docData from './documentaries.json'
 import featureData from './feature-films.json'
 import specialsData from './specials.json'
+import calculatePremiereData from '../assets/calculatefunctions'
+import colors from './colorschemes'
+
 
 const allData = docData.concat(featureData, specialsData)
-
-
-const colors = [
-	"#FF69B4", // Hot Pink
-	"#FF00FF", // Magenta
-	"#FF1493", // Deep Pink
-	"#8A2BE2", // Blue Violet
-	"#9932CC", // Dark Orchid
-	"#9400D3", // Dark Violet
-	"#8B008B", // Dark Magenta
-	"#800080", // Purple
-	"#4B0082", // Indigo
-	"#6A5ACD", // Slate Blue
-	"#483D8B", // Dark Slate Blue
-	"#7B68EE", // Medium Slate Blue
-	"#4169E1", // Royal Blue
-	"#0000FF", // Blue
-	"#1E90FF", // Dodger Blue
-	"#00BFFF", // Deep Sky Blue
-	"#87CEEB", // Sky Blue
-	"#00CED1", // Dark Turquoise
-	"#20B2AA", // Light Sea Green
-	"#008B8B", // Dark Cyan
-	"#008080", // Teal
-	"#00FA9A", // Medium Spring Green
-	"#ADFF2F", // Green Yellow
-	"#32CD32", // Lime Green
-	"#00FF00", // Green
-	"#7FFF00", // Chartreuse
-	"#FFFF00", // Yellow
-	"#FFD700", // Gold
-	"#FFA500", // Orange
-	"#FF8C00"  // Dark Orange
-  ];
-
-
 
 export function getMovieLanguage() {
 
@@ -69,38 +36,12 @@ export function getMovieLanguage() {
 		datasets: [{
 			label: "antal filmer per språk",
 			data: languageStats,
-			backgroundColor: colors
+			backgroundColor: colors,
+			
 		}]
 	}
 
 }
-
-
-
-
-function calculatePremiereData(data) {
-	const dates = data.map(object => object.Premiere)
-	const months = dates.map(month => month.split(' ')[0])
-	
-	const monthCount = {}
-	
-	months.forEach((month) => {
-		if(monthCount[month]){
-			monthCount[month]+=1
-		} else {
-			monthCount[month]=1
-		}
-	})
-
-	const monthNames = Object.keys(monthCount)
-	const premiereNumbers = Object.values(monthCount)
-
-	return {
-		names: monthNames,
-		numbers: premiereNumbers
-	}
-}
-
 
 export function getpremiereMonth() {
 
@@ -114,16 +55,65 @@ const specialsStats = calculatePremiereData(specialsData)
 		datasets: [{
 			label: 'Documentaries',
 			data:docStats.numbers,
-			backgroundColor: "#FFC300",
+			backgroundColor:colors[1],
 		},
 		{	label:'Feature Films',
 			data:featureStats.numbers,
-			backgroundColor:"#FF1493",
+			backgroundColor:colors[15],
 		},
 		{	label:'Specials',
 			data:specialsStats.numbers,
-			backgroundColor:"#008080",
+			backgroundColor:colors[28],
 		}
 	]
+	}
+}
+
+// använd split för att ta ut siffrorna, omvandla till nummmer med Numbers() skriv en if-sats om strängen är lång ska index 0 multipliceras med 60 och sedan adderas med index 2 . Skapa en ny array med alla värden sorterade.
+
+function calculateMovieLength(data) {
+
+	const runtime = data.map(object => {
+		const timing = object.Runtime.split(' ')
+			if(timing.length === 4){
+				const hours = Number(timing[0])
+				const minutes = Number(timing[2])
+				return hours * 60 + minutes
+			}else if(timing.length === 2 && timing[1]==='h'){
+				const hours = Number(timing[0])
+				return hours * 60
+			}
+			
+			else{
+				return Number(timing[0])
+			}
+	
+	})
+	
+	const sortedRuntimes = ( runtime.sort((a, b) => a - b))
+	return{
+		sortedRuntimes
+		
+	}
+}
+
+
+const testData = calculateMovieLength(allData)
+	
+console.log('TESTDATA resultat: ', testData);
+
+export function getMovieLength() {
+
+	const allRuntimes = calculateMovieLength(allData)
+	const labels = allRuntimes.sortedRuntimes.map((_, index) => ` ${index + 1}`)
+
+	return{
+		labels: labels,
+		datasets: [{
+			label: 'Runtimes',
+			data:allRuntimes.sortedRuntimes,
+			borderColor:colors,
+			pointBorderColor: colors
+		}]
 	}
 }
