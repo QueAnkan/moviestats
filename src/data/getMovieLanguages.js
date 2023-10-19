@@ -36,7 +36,6 @@ export function getMovieLanguage() {
 			label: "Number of movies",
 			data: languageStats,
 			backgroundColor: colors,
-			
 		}]
 	}
 

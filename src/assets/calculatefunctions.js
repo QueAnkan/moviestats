@@ -6,14 +6,18 @@ function calculatePremiereData(data) {
 	const dates = data.map(object => object.Premiere)
 	const months = dates.map(month => month.split(' ')[0])
 	
+	const allMonths =['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+
 	// räkna och samla hur många gånger varje månad förekommer => premiärer/månad
 	const monthCount = {}
 	
-	months.forEach((month) => {
-		if(monthCount[month]){
-			monthCount[month]+=1
+	allMonths.forEach((month) => {
+		if(months.includes(month)){
+			const amount = months.filter(month => month ===month).length
+			monthCount[month] = amount
 		} else {
-			monthCount[month]=1
+			monthCount[month]=0
 		}
 	})
 

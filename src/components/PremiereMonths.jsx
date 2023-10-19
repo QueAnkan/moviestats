@@ -10,7 +10,7 @@ ChartJS.register(Tooltip, Legend, LinearScale,
 const PremiereMonths = () =>{
 
 	return(
-		<section className="chart-container">
+		<section className="chart-container premiere-bar">
 			<h2>Premieres every month</h2>
 			<Bar data={monthBarConfig} ></Bar> 
 		</section>

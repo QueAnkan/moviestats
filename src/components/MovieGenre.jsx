@@ -10,8 +10,17 @@ const options = {
 	indexAxis: 'y' ,
 	elements: {
 		bar: {
-		borderWidth: 2,
+		borderWidth: 1,
 		},
+		maintainaspectRatio: false
+	},
+	catagorySpacing: 100 ,
+	scales:{
+		y:{
+			barPercentage:1.2,
+			max:70,
+			
+		}
 	},
 	plugins:{
 		Legend:{
@@ -23,9 +32,9 @@ const options = {
 const MovieGenre = () => {
 
 	return(
-		<section className="chart-container">
-			<h1>Number of movies in different genres</h1>
-			<Bar data={genreBarConfig} options={options}></Bar>
+		<section className="chart-container horiz-bar">
+			<h2>Number of movies in different genres</h2>
+			<Bar data={genreBarConfig} options={options} height='5000px' width='4800px'></Bar>
 		</section>
 	)
 }

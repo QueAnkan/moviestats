@@ -55,7 +55,7 @@ header{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 .3em .8em  rgb(143, 143, 143);
+	box-shadow: 0 .3em .8em  #8f8f8f;
 	color: white;
 	background-color: rgb(190, 0, 0);
 	transition: all 0.3s linear;

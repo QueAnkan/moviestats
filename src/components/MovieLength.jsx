@@ -10,12 +10,20 @@ import {
   const options = {
 	scales: {
 		y: {
-			min: 1,
-			max: 200
+			min: 0,
+			max: 200,
+			title:{
+				display:true,
+				text:'Runtime in minutes',
+			}
 		},
 		x: {
 			min: 0,
-			max: 200
+			max: 175,
+			title:{
+				display:true,
+				text:'Movie',
+			}
 		}
 	}
   }
@@ -24,8 +32,8 @@ import {
 const MovieLength = () => {
 
 	return(
-		<section className="chart-container">
-			<h1></h1>
+		<section className="chart-container runtime-line">
+			<h2>Movie Runtimes</h2>
 			<Line options={options} data={runtimeLineConfig}  ></Line>
 		</section>
 	)

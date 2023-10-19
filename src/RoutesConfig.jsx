@@ -1,10 +1,10 @@
 import { createHashRouter } from "react-router-dom";
 import Root from "./routes/Root";
 import Home from "./routes/home/Home"
-import Languages from "./routes/Languages";
-import Releases from "./routes/Releases";
-import Runtimes from "./routes/Runtimes";
-import Genres from "./routes/Genres";
+import Languages from "./routes/languages/Languages";
+import Releases from "./routes/releases/Releases";
+import Runtimes from "./routes/runtimes/Runtimes";
+import Genres from "./routes/genres/Genres";
 // import ErrorPage from "./routes/ErrorPage";
 
 const router = createHashRouter ([

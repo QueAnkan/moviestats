@@ -1,10 +1,13 @@
+import PremiereMonths from "../../components/PremiereMonths"
+import './releases.css'
+
 const Releases = () => {
 
 	return(
 		<section className="releases">
 			
 			<article>
-			hello 2
+			<PremiereMonths/>
 			</article>
 		</section>
 
