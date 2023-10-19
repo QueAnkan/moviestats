@@ -46,3 +46,8 @@ h1{
 	text-shadow: 0 .1em .1em  rgb(143, 143, 143);
 	color:darkslategray;
 }
+
+.chart-container{
+  width: 50vw;
+  margin-bottom: 4em;
+}
