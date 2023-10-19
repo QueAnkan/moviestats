@@ -37,9 +37,6 @@ header{
 }
 
 .tabs-section a:focus{
-	/* transform: scale(1.2, 1); */
-	/* border: 2px solid rgb(37, 3, 3)
-	; */
 	height: 6em;
 	font-weight:500; ;
 	background-color: rgb(190, 0, 0);

@@ -1,4 +1,6 @@
+import { NavLink } from 'react-router-dom'
 import './header.css'
+
 
 const Header = () => {
 
@@ -6,10 +8,11 @@ const Header = () => {
 	return (
 		<header>	
 			<section className="tabs-section">
-				<a href="#">Languages</a>
-				<a href="#">Releases</a>
-				<a href="#">Runtimes</a>
-				<a href="#">Genres</a>
+				
+				<NavLink to='/languages'>Languages</NavLink>
+				<NavLink to='/releases' >Releases</NavLink>
+				<NavLink to="/runtimes">Runtimes</NavLink>
+				<NavLink to="/genres">Genres</NavLink>
 				
 				<div className='search'></div>
 				

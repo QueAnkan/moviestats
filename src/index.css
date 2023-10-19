@@ -34,3 +34,15 @@ main{
   margin: 0 auto;
   background-color: white;
 }
+
+main > a {
+  text-decoration: none;
+}
+
+
+h1{
+	font-family: 'Monofett', monospace;
+	font-size: 500%;
+	text-shadow: 0 .1em .1em  rgb(143, 143, 143);
+	color:darkslategray;
+}
