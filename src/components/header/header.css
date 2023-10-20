@@ -5,7 +5,15 @@ header{
 	z-index: 2;
 	position: fixed;
 	box-shadow: 0 .1em .5em 0.2em rgb(133, 133, 133);
+	color: white;
 	background-color: darkslategray;
+}
+
+header>a:nth-child(1){
+	position: absolute;
+	right:10%;
+	font-size: 2em;
+	color: white;
 }
 
 .tabs-section{
@@ -46,17 +54,50 @@ header{
 	height: 6em;
 }
 
-.search{
+.search-tab{
 	width: 3em;
 	height: 3em;
 	padding: 1em;
 	border-radius: 0 0 1em 1em;
 	border: 2px solid #8b0000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	box-shadow: 0 .3em .8em  #8f8f8f;
 	color: white;
 	background-color: rgb(190, 0, 0);
 	transition: all 0.3s linear;
 }
+
+
+.visible{
+	visibility:visible;
+	position: absolute;
+	top:6em;
+	left:30%;
+	padding: 2em;
+	width: 40em;
+	height: 80vh;
+	text-align: center;
+	border: 1px solid #8b0000;
+	border-radius: 1em;
+	box-shadow: 0 .3em .8em  #8f8f8f;
+	color: white;
+	background-color: #8d8d8d;
+}
+
+.invisible{
+	visibility: hidden;
+	position: absolute;
+}
+
+.search-section >div{
+	padding: 2em;
+	margin: 2em;
+	text-align: left;
+	color: black;
+	background-color: white;
+}
+
+.search-section ul{
+	list-style:none;
+	text-align: left;
+}
+

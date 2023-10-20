@@ -15,17 +15,16 @@ const handleOnChange = (event) => {
 }
 
 const movieMatches = movies.filter((movie) =>{
-	return movie.Title.toLowerCase().includes(searchString.toLowerCase())
-
-	
+	return movie.Title.toLowerCase().includes(searchString.toLowerCase())	
 })
 
 	return(
-		<section>
-			<label htmlFor="search">icon</label>
+		<section className="search-section">
+			<label htmlFor="search">Search</label>
 			<input 
 			type="text"
 			id="search"
+			placeholder="Enter title"
 			value={searchString}
 			onChange={handleOnChange} />
 
@@ -33,9 +32,9 @@ const movieMatches = movies.filter((movie) =>{
 			{	
 				searchString === ''?
 				null:
-					movieMatches.length === 1? 
-					<ShowOneMovie movie={movieMatches[0]}/> :
-					movieMatches.map(movie => <div key={movie.Title+movie.Premiere}>{movie.Title}</div>)
+				movieMatches.length === 1? 
+				<ShowOneMovie movie={movieMatches[0]}/> :
+				movieMatches.map(movie => <div key={movie.Title+movie.Premiere}>{movie.Title}</div>)
 			}		
 			</div>
 		</section>

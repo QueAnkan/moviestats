@@ -1,0 +1,28 @@
+Dags för Framer Motion! Lägg över css från filer?
+
+
+SEARCH:
+Lås så inte bakgrund är interaktiv
+
+ Scroll på resultaten! 
+ 
+ Snygg animering när man trycker på sökknappen
+
+
+RELEASES:
+
+animering
+
+
+GENRES:
+
+animering
+
+HOME:
+
+animering vid start?
+flytta text mer centrerad
+
+ALLMÄNT:
+
+Städa kod
