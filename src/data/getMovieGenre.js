@@ -5,7 +5,6 @@ import colors from './colorschemes'
 
 const allFictionMovieData = featureData.concat(specialsData)
 
-console.log(docData.length);
 
 export function getMovieGenre() {
 
@@ -23,8 +22,7 @@ allFictionMovieData.forEach((movie) => {
 
 const genres = Object.entries(genreCount)
 const documentaries = ['Documenteries',  docData.length]
-console.log(documentaries);
-console.log(genres);
+
 genres.push(documentaries)
 const genreNames = genres.map(genre => genre[0])
 const genreStats =  genres.map(genre => genre[1])
