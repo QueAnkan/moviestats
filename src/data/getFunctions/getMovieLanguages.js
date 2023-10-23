@@ -1,7 +1,7 @@
-import docData from './documentaries.json'
-import featureData from './feature-films.json'
-import specialsData from './specials.json'
-import colors from './colorschemes'
+import docData from '../documentaries.json'
+import featureData from '../feature-films.json'
+import specialsData from '../specials.json'
+import colors from '../colorschemes'
 
 
 const allData = docData.concat(featureData, specialsData)

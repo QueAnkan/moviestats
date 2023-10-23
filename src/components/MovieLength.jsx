@@ -3,7 +3,7 @@ import {
 	Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend} from 'chart.js';
   ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
-  import { getMovieLength } from "../data/getMovieLength";
+  import { getMovieLength } from "../data/getFunctions/getMovieLength";
 
   const runtimeLineConfig = getMovieLength()
 

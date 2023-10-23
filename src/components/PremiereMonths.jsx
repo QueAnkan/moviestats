@@ -3,7 +3,7 @@ import { Chart as ChartJS, Tooltip, Legend,  BarElement, LinearScale, CategorySc
 ChartJS.register(Tooltip, Legend, LinearScale,
 	BarElement, CategoryScale);
 
-	import { getPremiereMonth } from "../data/getPremiereMonth";
+	import { getPremiereMonth } from "../data/getFunctions/getPremiereMonth";
 
 	const monthBarConfig = getPremiereMonth()
 
@@ -11,7 +11,7 @@ const PremiereMonths = () =>{
 
 	return(
 		<section className="chart-container premiere-bar">
-			<h2>Premieres every month</h2>
+			<h2>Premieres per month 2022</h2>
 			<Bar data={monthBarConfig} ></Bar> 
 		</section>
 	)

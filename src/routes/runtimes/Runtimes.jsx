@@ -5,15 +5,18 @@ import { easeIn, motion } from 'framer-motion'
 const Runtimes = () => {
 
 	return(
-		<section className="runtimes">
+		<motion.section className="runtimes"
+		initial={{backgroundColor: '#ffffff '}}
+		animate={{backgroundColor:'#000000'}}
+		transition={{duration:3, delay:1.5, type: easeIn }}>
 		
 			<motion.article
-			initial= {{rotateX:  -90, transformOrigin: 'top', opacity: 0.5, boxShadow:' 0 55em 5em  rgb(143, 143, 143)'}}
-			animate = {{rotateX: 0, opacity:1, transformPerspective: 3000, boxShadow:' 0 .1em .1em  rgb(143, 143, 143)'}}
-			transition={{duration: 1.5, delay: 0.6, }}>
+			initial= {{rotateX:  90, transformOrigin: 'bottom', opacity: 0.5,  boxShadow:' 15em 5em  rgb(143, 143, 143)', backgroundColor: '#292929'}}
+			animate = {{rotateX: 0, opacity:1, transformPerspective: 1000, boxShadow:' 0 .3em .8em  rgb(143, 143, 143)', backgroundColor: '#ffffff'}}
+			transition={{duration: 1, delay:1, type: easeIn }}>
 			<MovieLength/>
 			</motion.article>
-		</section>
+		</motion.section>
 
 	)
 }

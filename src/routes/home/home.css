@@ -15,7 +15,9 @@
 }
 
 .home > article{
-	padding-top: 2em;
+	margin-top: 2em;
+	padding: 2em;
+	box-shadow: 0 .3em .8em  rgb(143, 143, 143);
 }
 
 .home  p{

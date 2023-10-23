@@ -9,12 +9,13 @@ function calculatePremiereData(data) {
 	const allMonths =['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 
-	// räkna och samla hur många gånger varje månad förekommer => premiärer/månad
+	// räkna och samla hur många gånger varje månad förekommer => premiärer/månad i key/value par
 	const monthCount = {}
+	console.log(monthCount);
 	
 	allMonths.forEach((month) => {
 		if(months.includes(month)){
-			const amount = months.filter(month => month ===month).length
+			const amount = months.filter(m => m === month).length
 			monthCount[month] = amount
 		} else {
 			monthCount[month]=0
@@ -50,7 +51,7 @@ function calculateMovieLength(data) {
 			}
 	})
 	
-	const sortedRuntimes = ( runtime.sort((a, b) => a - b))
+	const sortedRuntimes = [...runtime].sort((a, b) => a - b)
 	return{
 		sortedRuntimes
 		

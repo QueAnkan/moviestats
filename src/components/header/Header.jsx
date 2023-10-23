@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import './header.css'
-import Search from '../../components/Search'
+import Search from './Search'
 import { FaMagnifyingGlass } from "react-icons/fa6"
 import { BiHomeHeart} from "react-icons/bi"
 import { useState } from 'react'

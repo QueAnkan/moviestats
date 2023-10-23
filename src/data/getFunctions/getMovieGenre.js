@@ -1,7 +1,7 @@
-import docData from './documentaries.json'
-import featureData from './feature-films.json'
-import specialsData from './specials.json'
-import colors from './colorschemes'
+import docData from '../documentaries.json'
+import featureData from '../feature-films.json'
+import specialsData from '../specials.json'
+import colors from '../colorschemes'
 
 const allFictionMovieData = featureData.concat(specialsData)
 
@@ -22,10 +22,11 @@ allFictionMovieData.forEach((movie) => {
 
 const genres = Object.entries(genreCount)
 const documentaries = ['Documenteries',  docData.length]
-
 genres.push(documentaries)
-const genreNames = genres.map(genre => genre[0])
-const genreStats =  genres.map(genre => genre[1])
+const sortedGenres = [...genres].sort((a,b) => a[0].localeCompare( b[0]) )
+
+const genreNames = sortedGenres.map(genre => genre[0])
+const genreStats = sortedGenres.map(genre => genre[1])
 
 	return{
 		labels:genreNames,

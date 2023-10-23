@@ -1,7 +1,7 @@
 
 header{
 	height: 2em;
-	width: 100%;
+	width: 100vw;
 	z-index: 2;
 	position: fixed;
 	box-shadow: 0 .1em .5em 0.2em rgb(133, 133, 133);
@@ -39,7 +39,7 @@ header>a:nth-child(1){
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0 .3em .8em  rgb(143, 143, 143);
-	color: white;
+	color: #ffffff;
 	background-color: #8d8d8d;
 	transition: all 0.3s linear;
 }
@@ -63,7 +63,15 @@ header>a:nth-child(1){
 	box-shadow: 0 .3em .8em  #8f8f8f;
 	color: white;
 	background-color: rgb(190, 0, 0);
-	transition: all 0.3s linear;
+	
+}
+
+.search-tab:hover{
+	cursor: pointer;
+	background-color: #01bb49;
+	border-color: #008b35;
+	
+
 }
 
 
@@ -72,10 +80,10 @@ header>a:nth-child(1){
 	position: absolute;
 	top:6em;
 	left:30%;
-	padding: 2em;
+	padding:2em 4em;
 	width: 40em;
 	height: 80vh;
-	text-align: center;
+	text-align: left;
 	border: 1px solid #8b0000;
 	border-radius: 1em;
 	box-shadow: 0 .3em .8em  #8f8f8f;
@@ -88,16 +96,24 @@ header>a:nth-child(1){
 	position: absolute;
 }
 
-.search-section >div{
-	padding: 2em;
-	margin: 2em;
+.search-section > div {
+margin-bottom: 2em;
+}
+.search-section label{
+	padding-right: 1em;
+}
+
+.search-section >ul{
+	padding: 1em 2em;
 	text-align: left;
+	line-height: 1.8;
+	max-height: 40em;
+	min-height: 40em;
+	overflow-y: scroll;
 	color: black;
 	background-color: white;
 }
 
-.search-section ul{
-	list-style:none;
-	text-align: left;
+.search-section li {
+	width: 100%;
 }
-

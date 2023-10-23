@@ -1,28 +1,34 @@
 Dags för Framer Motion! Lägg över css från filer?
 
+TABS:
+
+	lägg till active
 
 SEARCH:
-Lås så inte bakgrund är interaktiv
+	Lås så inte bakgrund är interaktiv
+	stäng gnm att klicka utanför
+	centera i viewport?
 
- Scroll på resultaten! 
- 
- Snygg animering när man trycker på sökknappen
+	Snygg animering när man trycker på / hovrar över sökknappen
+
+	ta bort punkterna i lista på onetitle!
 
 
 RELEASES:
 
-animering
 
+RUNTIMES: 
+	förbättra animering, rörelsen ser inte riktigt naturlig ut.
 
 GENRES:
 
-animering
+	animering
 
 HOME:
 
-animering vid start?
-flytta text mer centrerad
+	animering vid start?
+	flytta text mer centrerad
 
 ALLMÄNT:
 
-Städa kod
+	Städa kod

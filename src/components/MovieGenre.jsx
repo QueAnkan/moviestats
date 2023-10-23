@@ -1,6 +1,6 @@
 import { Bar } from "react-chartjs-2"
 import { Chart as ChartJS, Tooltip, Legend,  BarElement, LinearScale, CategoryScale  } from 'chart.js';
-import { getMovieGenre } from "../data/getMovieGenre";
+import { getMovieGenre } from "../data/getFunctions/getMovieGenre";
 ChartJS.register(Tooltip, Legend, LinearScale,
 	BarElement, CategoryScale);
 
@@ -24,7 +24,7 @@ const options = {
 	},
 	plugins:{
 		Legend:{
-			position: 'rigth',
+			position: 'right',
 		}
 	}
 }

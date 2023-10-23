@@ -1,7 +1,7 @@
 import { useState } from "react"
-import docData from '../data/documentaries.json'
-import featureData from '../data/feature-films.json'
-import specialsData from '../data/specials.json'
+import docData from '../../data/documentaries.json'
+import featureData from '../../data/feature-films.json'
+import specialsData from '../../data/specials.json'
 import ShowOneMovie from './ShowOneMovie'
 
 
@@ -20,6 +20,7 @@ const movieMatches = movies.filter((movie) =>{
 
 	return(
 		<section className="search-section">
+			<div>
 			<label htmlFor="search">Search</label>
 			<input 
 			type="text"
@@ -27,16 +28,18 @@ const movieMatches = movies.filter((movie) =>{
 			placeholder="Enter title"
 			value={searchString}
 			onChange={handleOnChange} />
+			</div>
 
-			<div>
+			<ul>
+				<h3>Search result:</h3>
 			{	
 				searchString === ''?
 				null:
 				movieMatches.length === 1? 
 				<ShowOneMovie movie={movieMatches[0]}/> :
-				movieMatches.map(movie => <div key={movie.Title+movie.Premiere}>{movie.Title}</div>)
+				movieMatches.map(movie => <li key={movie.Title+movie.Premiere}>{movie.Title}</li>)
 			}		
-			</div>
+			</ul>
 		</section>
 	)
 }
