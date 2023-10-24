@@ -103,17 +103,39 @@ margin-bottom: 2em;
 	padding-right: 1em;
 }
 
-.search-section >ul{
-	padding: 1em 2em;
-	text-align: left;
-	line-height: 1.8;
-	max-height: 40em;
-	min-height: 40em;
-	overflow-y: scroll;
+.search-result{
+	padding: 1em 0 1em 2em;
+	border-radius: 1em;
 	color: black;
 	background-color: white;
 }
 
-.search-section li {
+.search-result h3{
+	padding-bottom: 0.7em;
+}
+
+.search-result > ul{
+	padding: 0 2em;
+	text-align: left;
+	line-height: 1.8;
+	max-height: 35em;
+	min-height: 35em;
 	width: 100%;
+	overflow-y: scroll;
+	list-style: square;
+	color: black;
+	position: relative;
+	background-color: white;
+}
+
+.search-result li {
+	width: 100%;	
+}
+
+.one-movie-info{
+	list-style: none;
+}
+
+.one-movie-info span:nth-child(1){
+	font-weight: 600;
 }

@@ -4,7 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
+	
 }
 
 .home > h1{
@@ -14,15 +14,40 @@
 	color:darkslategray;
 }
 
+
 .home > article{
 	margin-top: 2em;
 	padding: 2em;
 	box-shadow: 0 .3em .8em  rgb(143, 143, 143);
+	z-index: 1;
+	background-color: white;	
 }
 
 .home  p{
 	padding: 0.5em;
 	width: 28em;
 	text-align: center;
+}
+
+.easterEgg{
+	position:absolute;
+ 	top: 17em;
+	width: 30em;
+	padding: 2em;
+	height: 19em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	z-index: 0;
+}
+
+.easterEgg div:nth-child(2){
+	justify-self: flex-end;
+}
+.easterEgg div:nth-child(3){
+	align-self: flex-end;
+}
+.easterEgg div:nth-child(4){
+	align-self: flex-end;
+	justify-self: flex-end;
 }
 

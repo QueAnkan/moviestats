@@ -6,42 +6,45 @@ import ShowOneMovie from './ShowOneMovie'
 
 
 const Search = ()  => {
- const [searchString, setSearchstring] = useState('')
-const movies = docData.concat(featureData, specialsData)
+ 	const [searchString, setSearchstring] = useState('')
+	const movies = docData.concat(featureData, specialsData)
 
 
-const handleOnChange = (event) => {
-	setSearchstring(event.target.value)
-}
 
-const movieMatches = movies.filter((movie) =>{
-	return movie.Title.toLowerCase().includes(searchString.toLowerCase())	
-})
 
-	return(
-		<section className="search-section">
-			<div>
-			<label htmlFor="search">Search</label>
-			<input 
-			type="text"
-			id="search"
-			placeholder="Enter title"
-			value={searchString}
-			onChange={handleOnChange} />
-			</div>
+	const handleOnChange = (event) => {
+		setSearchstring(event.target.value)
+	}
 
-			<ul>
-				<h3>Search result:</h3>
-			{	
-				searchString === ''?
-				null:
-				movieMatches.length === 1? 
-				<ShowOneMovie movie={movieMatches[0]}/> :
-				movieMatches.map(movie => <li key={movie.Title+movie.Premiere}>{movie.Title}</li>)
-			}		
-			</ul>
-		</section>
-	)
+	const movieMatches = movies.filter((movie) =>{
+		return movie.Title.toLowerCase().includes(searchString.toLowerCase())	
+	})
+
+		return(
+			<section className="search-section">
+				<div>
+					<label htmlFor="search">Search</label>
+					<input 
+					type="text"
+					id="search"
+					placeholder="Enter title"
+					value={searchString}
+					onChange={handleOnChange} />
+				</div>
+				<div className="search-result">
+					<h3>Search result:</h3>
+					<ul>	
+						{	
+							searchString === ''?
+							null:
+							movieMatches.length === 1? 
+							<ShowOneMovie movie={movieMatches[0]}/> :
+							movieMatches.map(movie => <li key={movie.Title+movie.Premiere}>{movie.Title}</li>)
+						}		
+					</ul>
+				</div>
+			</section>
+		)
 }
 
 export default Search

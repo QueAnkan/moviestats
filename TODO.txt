@@ -11,8 +11,6 @@ SEARCH:
 
 	Snygg animering när man trycker på / hovrar över sökknappen
 
-	ta bort punkterna i lista på onetitle!
-
 
 RELEASES:
 
