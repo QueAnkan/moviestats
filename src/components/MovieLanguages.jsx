@@ -12,15 +12,28 @@ const MovieLanguages = () =>{
 
 	return(
 		<motion.section className="chart-container language-pie"
-		initial= {{translateY: -200, opacity:0, /* scaleX:0.1, */ scaleX:{ transformOrigin: 'bottom'}, scaleY:{ transformOrigin: 'bottom'}}}
+			initial= {{	translateY: -200, 
+						opacity:0, 
+						scaleX:{ transformOrigin: 'bottom'}, 
+						scaleY:{ transformOrigin: 'bottom'}
+					}}
 
-			animate={{translateY: 0 , opacity:1, scaleX:[1, 1.3, 0.8, 1.1, 0.9, 1], scaleY:[1, 0.8, 1.1, 0.9, 1.05, 1]}}
+			animate={{	translateY: 0 , 
+						opacity:1, 
+						scaleX:[1, 1.3, 0.8, 1.1, 0.9, 1], 
+						scaleY:[1, 0.8, 1.1, 0.9, 1.05, 1]}}
 
-			transition={{ duration: .3, delay:0.8, type: 'easeIn', scaleX:{delay:1, duration:1.5, type:'easeOut'}, scaleY:{delay:1, duration:1.5, type:'easeOut'}} }	
+			transition={{ duration: .3, 
+						delay:0.8, 
+						type: 'easeIn', 
+						scaleX:{delay:1, 
+						duration:1.5, 
+						type:'easeOut'}, 
+						scaleY:{delay:1, duration:1.5, type:'easeOut'}
+					}}	
 		>
 			<h2>Number of movies distributed by language</h2>
-			<Pie data={languagePieConfig}
-></Pie>
+			<Pie data={languagePieConfig}></Pie>
 		</motion.section>
 	)
 }

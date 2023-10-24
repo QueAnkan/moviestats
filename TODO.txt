@@ -18,11 +18,10 @@ RELEASES:
 
 
 RUNTIMES: 
-	förbättra animering, rörelsen ser inte riktigt naturlig ut.
+	
 
 GENRES:
 
-	animering
 
 HOME:
 

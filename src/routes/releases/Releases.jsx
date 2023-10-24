@@ -8,9 +8,17 @@ const Releases = () => {
 		<section className="releases">
 			
 			<motion.article
-			initial= {{scale:0.02,}}
-			 animate={{scale:1, rotate:[-360, 360, 365, 355,360 ], }}
-			 transition={{ duration: 1, delay: 0.8, type: 'easeOut'}}>	
+				initial= {{	scale:0,
+							
+						}}
+				animate={{	scale:[0, 3,  1], 
+							rotate:[0, 740, 700, 730, 710, 725 , 718 , 721 , 720]  
+						}}
+				transition={{duration:2.5, 
+							delay: 0.9, 
+							type: 'easeOut',
+							scale:{duration: .8}
+							}}>	
 			<PremiereMonths/>
 			</motion.article>
 		</section>

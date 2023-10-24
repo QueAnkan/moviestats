@@ -2,7 +2,7 @@ import docData from '../documentaries.json'
 import featureData from '../feature-films.json'
 import specialsData from '../specials.json'
 import {calculatePremiereData} from '../../assets/calculatefunctions'
-import colors from '../colorschemes'
+import {colors} from '../colorschemes'
 
 
 export function getPremiereMonth() {

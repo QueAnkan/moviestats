@@ -11,7 +11,6 @@ function calculatePremiereData(data) {
 
 	// räkna och samla hur många gånger varje månad förekommer => premiärer/månad i key/value par
 	const monthCount = {}
-	console.log(monthCount);
 	
 	allMonths.forEach((month) => {
 		if(months.includes(month)){

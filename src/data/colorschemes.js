@@ -31,4 +31,13 @@ const colors = [
 	"#FF8C00"  // Dark Orange
   ];
 
-  export default colors
+  
+
+  function choseColorStartIndex(i){
+	const modiefiedColors = [...colors].slice(i)
+
+	return(modiefiedColors)
+}
+
+
+export {colors, choseColorStartIndex}
