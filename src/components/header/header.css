@@ -86,8 +86,9 @@ header>a:nth-child(1){
 	text-align: left;
 	border: 1px solid #8b0000;
 	border-radius: 1em;
-	box-shadow: 0 .3em .8em  #8f8f8f;
+	box-shadow: 0 .4em 1em  #141414;
 	color: white;
+	z-index: 11;
 	background-color: #8d8d8d;
 }
 
@@ -95,6 +96,17 @@ header>a:nth-child(1){
 	visibility: hidden;
 	position: absolute;
 }
+
+.background-blur{
+	position:fixed;
+	left:0;
+	top:0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
 
 .search-section > div {
 margin-bottom: 2em;

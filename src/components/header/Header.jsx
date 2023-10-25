@@ -30,6 +30,7 @@ const Header = () => {
 				onClick={handleOnClick}>
 				<FaMagnifyingGlass/>
 				</button>
+				{isOpen ? null : <div className='background-blur' onClick={handleOnClick}></div> }
 				<div className={visibleClass}>
 			{isOpen ? null : <Search/> }	
 			</div>		

@@ -39,7 +39,8 @@ const Search = ()  => {
 							null:
 							movieMatches.length === 1? 
 							<ShowOneMovie movie={movieMatches[0]}/> :
-							movieMatches.map(movie => <li key={movie.Title+movie.Premiere}>{movie.Title}</li>)
+							movieMatches.map(movie => 
+							<li key={movie.Title+movie.Premiere}>{movie.Title}</li>)
 						}		
 					</ul>
 				</div>

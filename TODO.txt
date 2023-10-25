@@ -5,8 +5,7 @@ TABS:
 	lägg till active
 
 SEARCH:
-	Lås så inte bakgrund är interaktiv
-	stäng gnm att klicka utanför
+
 	centera i viewport?
 
 	Snygg animering när man trycker på / hovrar över sökknappen
