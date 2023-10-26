@@ -62,24 +62,17 @@ header>a:nth-child(1){
 	border: 2px solid #8b0000;
 	box-shadow: 0 .3em .8em  #8f8f8f;
 	color: white;
-	background-color: rgb(190, 0, 0);
+	background-color: #be0000;
 	
 }
 
-.search-tab:hover{
-	cursor: pointer;
-	background-color: #01bb49;
-	border-color: #008b35;
-	
 
-}
-
+/* Här börjar kod för sökrutan */
 
 .visible{
 	visibility:visible;
 	position: absolute;
 	top:6em;
-	left:30%;
 	padding:2em 4em;
 	width: 40em;
 	height: 80vh;

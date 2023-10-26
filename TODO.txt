@@ -10,6 +10,8 @@ SEARCH:
 
 	Snygg animering när man trycker på / hovrar över sökknappen
 
+	animering på pop-up:en
+
 
 RELEASES:
 

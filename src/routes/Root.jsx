@@ -14,7 +14,7 @@ const Root = () => {
 					whileHover={{
 						scale:1.1,
 						textShadow:['0 .1em .1em  rgb(143, 143, 143)', '0 .2em .2em  rgb(143, 143, 143)']
-					}}
+					}}	
 					transition={{
 						type: "spring", stiffness: 300, damping:12,
 					}}
