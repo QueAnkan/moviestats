@@ -6,10 +6,6 @@ TABS:
 
 SEARCH:
 
-	centera i viewport?
-
-	Snygg animering när man trycker på / hovrar över sökknappen
-
 	animering på pop-up:en
 
 
@@ -25,8 +21,7 @@ GENRES:
 HOME:
 
 	animering vid start?
-	flytta text mer centrerad
-
+	
 ALLMÄNT:
 
 	Städa kod
