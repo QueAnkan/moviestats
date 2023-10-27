@@ -11,27 +11,25 @@ const Root = () => {
 			<main className="main">
 				<NavLink to='/' >
 					<motion.h1
-					whileHover={{
-						scale:1.1,
-						textShadow:['0 .1em .1em  rgb(143, 143, 143)', '0 .2em .2em  rgb(143, 143, 143)']
-					}}	
-
-					whileTap= {{
-						rotateX:360,
-
-					}}
-					transition={{
-						type: "spring", stiffness: 300, damping:12, rotateX:{type:'linear', duration:.5}
-					}}
+						whileHover={{
+									scale:1.1,
+									textShadow:['0 .1em .1em  rgb(143, 143, 143)', '0 .2em .2em  rgb(143, 143, 143)']
+						}}	
+						whileTap= {{
+									rotateX:360,
+						}}
+						transition={{
+									type: "spring", 
+									stiffness: 300, 
+									damping:12, 
+									rotateX:{type:'linear', duration:.5}
+						}}
 					>MovieStats</motion.h1>
 				</NavLink>
 				<Outlet/>
-			</main>
-		
-		</div>
-		
+			</main>		
+		</div>		
 	)
 }
-console.log('root')
 
 export default Root

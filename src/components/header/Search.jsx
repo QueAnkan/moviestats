@@ -3,13 +3,14 @@ import docData from '../../data/documentaries.json'
 import featureData from '../../data/feature-films.json'
 import specialsData from '../../data/specials.json'
 import ShowOneMovie from './ShowOneMovie'
-import { animate, stagger, motion, delay } from "framer-motion"
+import { motion} from "framer-motion"
+
 
 
 const Search = ()  => {
  	const [searchString, setSearchstring] = useState('')
 	const movies = docData.concat(featureData, specialsData)
-
+	
 	const handleOnChange = (event) => {
 		setSearchstring(event.target.value)
 	}
@@ -18,7 +19,6 @@ const Search = ()  => {
 		return movie.Title.toLowerCase().includes(searchString.toLowerCase())	
 	})
 
-	
 	return(
 		<section className="search-section">
 			<div>
@@ -45,6 +45,7 @@ const Search = ()  => {
 					}		
 				</motion.ul>
 			</div>
+			
 		</section>
 	)
 }

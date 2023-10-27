@@ -1,5 +1,5 @@
 import MovieGenre from '../../components/MovieGenre'
-import { easeOut, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import './genre.css'
 
 const Genres = () => {

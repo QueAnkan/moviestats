@@ -11,20 +11,6 @@ const options = {
 	elements: {
 		bar: {
 		borderWidth: 1,
-		},
-		maintainaspectRatio: false
-	},
-	catagorySpacing: 100 ,
-	scales:{
-		y:{
-			barPercentage:1.2,
-			max:70,
-			
-		}
-	},
-	plugins:{
-		Legend:{
-			position: 'right',
 		}
 	}
 }

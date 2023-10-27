@@ -3,27 +3,14 @@ import './header.css'
 import Search from './Search'
 import { FaMagnifyingGlass } from "react-icons/fa6"
 import { BiHomeHeart} from "react-icons/bi"
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-
-
-
+import { useSearchState } from '../../assets/useSearchStates'
 
 
 const Header = () => {
-	const [isOpen,setIsOpen] = useState(true)
-	const [drop, setDrop] = useState(0)
-	const visibleClass = 'visible ' + (isOpen ? 'invisible' : '')
 
-	const handleOnTap = () => {
-		setIsOpen(!isOpen)
-		if(!isOpen){
-		setDrop(0)
-		}else{
-			setDrop(1000)
-		}
-	}
-
+	const {isOpen, handleOnTap, drop, visibleClass} = useSearchState()
+	
 	return (
 		<header>	
 			<NavLink to='/' ><BiHomeHeart /></NavLink>
@@ -65,14 +52,10 @@ const Header = () => {
 										<Search/> 
 											
 									</motion.div>	
-					}	
-				
-				
-			</section>
-			
+					}					
+			</section>			
 		</header>
 	)
 }
 
 export default Header
-

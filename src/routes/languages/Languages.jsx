@@ -4,14 +4,11 @@ import './languages.css'
 const Languages = () => {
 
 	return(
-		<section className="languages">
-		
-			<article>
-			
+		<section className="languages">	
+			<article>		
 			< MovieLanguages/>
 			</article>
 		</section>
-
 	)
 }
 

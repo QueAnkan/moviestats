@@ -8,8 +8,7 @@ const Releases = () => {
 		<section className="releases">
 			
 			<motion.article
-				initial= {{	scale:0,
-							
+				initial= {{	scale:0,							
 						}}
 				animate={{	scale:[0, 3,  1], 
 							rotate:[0, 740, 700, 730, 710, 725 , 718 , 721 , 720]  
@@ -22,7 +21,6 @@ const Releases = () => {
 			<PremiereMonths/>
 			</motion.article>
 		</section>
-
 	)
 }
 

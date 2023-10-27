@@ -28,7 +28,22 @@ const colors = [
 	"#FFFF00", // Yellow
 	"#FFD700", // Gold
 	"#FFA500", // Orange
-	"#FF8C00"  // Dark Orange
+	"#FF8C00",  // Dark Orange
+	"#FF4500", // Orange Red
+	"#FF6347", // Tomato
+	"#FF7F50", // Coral
+	"#FFA07A", // Light Salmon
+	"#FFDAB9", // Peach Puff
+	"#F08080", // Light Coral
+	"#CD5C5C", // Indian Red
+	"#DC143C", // Crimson
+	"#FF0000", // Red
+	"#B22222", // Fire Brick
+	"#8B0000", // Dark Red
+	"#2E8B57", // Sea Green
+	"#3CB371", // Medium Sea Green
+	"#556B2F", // Dark Olive Green
+	"#8FBC8F"  // Dark Sea Green
   ];
 
   

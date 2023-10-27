@@ -101,7 +101,7 @@ header>a:nth-child(1){
 }
 
 
-.search-section > div {
+.search-section > div:nth-child(1) {
 margin-bottom: 2em;
 }
 .search-section label{
@@ -144,3 +144,4 @@ margin-bottom: 2em;
 .one-movie-info span:nth-child(1){
 	font-weight: 600;
 }
+

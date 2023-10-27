@@ -9,6 +9,9 @@ const Home = () => {
 		<section className="home">
 		
 				<motion.article
+				initial={{scale:5, color:'#ffffff'}}
+				animate={{scale:[5, 0.8, 1], color:['#ffffff', '#ffffff', '#ffffff', '#000000']}}
+				transition={{duration: .8, delay:0.5, ease:'easeInOut'}}
 				drag
 				dragConstraints={{left: 0, right:0, top: 0, bottom:0}}
 				whileHover={{cursor:'grab'}}>
