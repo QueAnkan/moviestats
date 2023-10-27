@@ -7,8 +7,7 @@ function calculatePremiereData(data) {
 	const months = dates.map(month => month.split(' ')[0])
 	
 	const allMonths =['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-
-
+	
 	// räkna och samla hur många gånger varje månad förekommer => premiärer/månad i key/value par
 	const monthCount = {}
 	

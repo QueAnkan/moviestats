@@ -12,24 +12,24 @@ export function getPremiereMonth() {
 	const specialsStats = calculatePremiereData(specialsData)
 	
 	
-		return{
-			labels: docStats.names,
-			datasets: [{
-				label: 'Documentaries',
-				data:docStats.numbers,
-				backgroundColor:colors[1],
-			},
-			{	label:'Feature Films',
-				data:featureStats.numbers,
-				backgroundColor:colors[15],
-			},
-			{	label:'Specials',
-				data:specialsStats.numbers,
-				backgroundColor:colors[28],
-			}
-		]
+	return{
+		labels: docStats.names,
+		datasets: [{
+			label: 'Documentaries',
+			data:docStats.numbers,
+			backgroundColor:colors[1],
+		},
+		{	label:'Feature Films',
+			data:featureStats.numbers,
+			backgroundColor:colors[15],
+		},
+		{	label:'Specials',
+			data:specialsStats.numbers,
+			backgroundColor:colors[28],
 		}
+	]
 	}
+}
 	
 	
 	

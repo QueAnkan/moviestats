@@ -48,7 +48,7 @@ const colors = [
 
   
 
-  function choseColorStartIndex(i){
+function choseColorStartIndex(i){
 	const modiefiedColors = [...colors].slice(i)
 
 	return(modiefiedColors)

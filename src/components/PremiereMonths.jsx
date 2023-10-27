@@ -2,10 +2,9 @@ import { Bar } from "react-chartjs-2"
 import { Chart as ChartJS, Tooltip, Legend,  BarElement, LinearScale, CategoryScale  } from 'chart.js';
 ChartJS.register(Tooltip, Legend, LinearScale,
 	BarElement, CategoryScale);
+import { getPremiereMonth } from "../data/getFunctions/getPremiereMonth";
 
-	import { getPremiereMonth } from "../data/getFunctions/getPremiereMonth";
-
-	const monthBarConfig = getPremiereMonth()
+const monthBarConfig = getPremiereMonth()
 
 const PremiereMonths = () =>{
 

@@ -11,8 +11,8 @@ export function getMovieLength() {
 	const allRuntimes = calculateMovieLength(allData)
 	
 	const docStats = calculateMovieLength(docData)
-const featureStats = calculateMovieLength(featureData)
-const specialsStats = calculateMovieLength(specialsData)
+	const featureStats = calculateMovieLength(featureData)
+	const specialsStats = calculateMovieLength(specialsData)
 	const labels = allRuntimes.sortedRuntimes.map((_, index) => ` ${index + 1}`)
 
 	return{

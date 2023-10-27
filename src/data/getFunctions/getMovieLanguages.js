@@ -3,7 +3,6 @@ import featureData from '../feature-films.json'
 import specialsData from '../specials.json'
 import  {choseColorStartIndex}  from '../colorschemes'
 
-
 const allData = docData.concat(featureData, specialsData)
 
 export function getMovieLanguage() {
@@ -29,8 +28,6 @@ export function getMovieLanguage() {
 	// Plocka ut antalet förekomster av varje språk
 	const languageStats = sortedLanguages.map(language => language[1])
 
-	
-
 	return{
 		labels: languages,
 		datasets: [{
@@ -39,7 +36,6 @@ export function getMovieLanguage() {
 			backgroundColor: choseColorStartIndex(8),
 		}]
 	}
-
 }
 
 

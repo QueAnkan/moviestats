@@ -5,9 +5,7 @@ const Languages = () => {
 
 	return(
 		<section className="languages">	
-			<article>		
-			< MovieLanguages/>
-			</article>
+				< MovieLanguages/>
 		</section>
 	)
 }
