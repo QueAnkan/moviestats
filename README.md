@@ -1,8 +1,5 @@
-# React + Vite
+React app with charts made with react-chartjs-2, showing animations that are built on the 12 animation principles using Framer Motion.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+You will find "squash and stretch" in the bouncy language chart and "follow through" in the spinning runtimes chart. The genres chart provides an example of "secondary action," and the search field will demonstrate "staging" by placing itself in focus above the rest of the page.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Throughout the app, I have been working to implement "timing" for all animations, and I've tried to make the app playful, so I think you will find some nice "exaggerations" as well!
